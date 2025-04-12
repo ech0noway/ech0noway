@@ -51,7 +51,16 @@
   typeWriter();
 </script>  
    <div style="position: absolute; right: 20px; top: 50px;">
-     <p>Я закреплён справа!</p>
+    <button onclick="clickCounter()">Кликни меня!</button>
+<p>Ты кликнул: <span id="count">0</span> раз(а)</p>
+
+<script>
+  let count = 0;
+  function clickCounter() {
+    count++;
+    document.getElementById("count").textContent = count;
+  }
+</script>
      </div>
       <ul>
     <li><p>Первая встреча ech0noway и skywhywalkera <a href="https://imgur.com/a/Y8FvOxz" target="_blank">ech0/sky</a>.</p></li>
