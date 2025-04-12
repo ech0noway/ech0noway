@@ -15,12 +15,35 @@
       <meta charset="utf-8">
       <title>twitch/tg ech0noway</title>
     </head>  
-   <style> 
-   body {
-      background-color: black; 
-      color: white; 
-    }
-  </style>
+   <style>
+  body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: move 10s linear infinite;
+  }
+  @keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+  }
+</style>
+
+<script>
+  for (let i = 0; i < 100; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDuration = 5 + Math.random() * 5 + "s";
+    document.body.appendChild(star);
+  }
+</script>
   <h1 id="typing"></h1>
 
 <script>
