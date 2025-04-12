@@ -1,4 +1,14 @@
-<!DOCTYPE html> БРАТ СКАЯ?
+<!DOCTYPE html> <button id="troll" style="position:absolute;">БРАТ СКАЯ?</button>
+
+<script>
+  const btn = document.getElementById("troll");
+  btn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+  });
+</script>
  
  <html>
     <head>
