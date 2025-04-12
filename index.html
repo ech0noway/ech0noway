@@ -11,7 +11,17 @@
 </script>
  
  <html>
-    <head>
+    <head>                                                                                                           <p>Текущее время: <span id="clock"></span></p>
+
+                                                                                                                      <script>
+                                                                                                                      function updateClock() {
+                                                                                                                      const now = new Date();
+                                                                                                                      document.getElementById("clock").textContent =
+                                                                                                                      now.toLocaleTimeString();
+                                                                                                                                    }
+                                                                                                                      setInterval(updateClock, 1000);
+                                                                                                                      updateClock();
+                                                                                                                      </script>
       <meta charset="utf-8">
       <title>twitch/tg ech0noway</title>
     </head>  
