@@ -134,20 +134,17 @@
 </script>
    </div>
       
-    <style>
+   <style>
   body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f3f3f3;
   }
 
-  .card-row {
+  .card-wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: flex-start; /* выравнивание ВЛЕВО */
     padding: 40px;
-    flex-wrap: wrap;
   }
 
   .card {
@@ -155,10 +152,9 @@
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 320px;
+    max-width: 700px;
     font-family: Arial, sans-serif;
     color: #333;
-    flex: 1;
   }
 
   .card h3 {
@@ -186,33 +182,21 @@
   .card-images {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 20px;
     flex-wrap: wrap;
   }
 
   .card-images img {
     border-radius: 8px;
-    max-width: 140px;
+    max-width: 300px;
     width: 100%;
     height: auto;
   }
 </style>
 
-<div class="card-row">
-
-  <!-- Левая карточка — Настя -->
+<div class="card-wrapper">
   <div class="card">
-    <h3>Про Настю</h3>
-    <p>А про Настю пока что ничего не найдено, ну или я не хочу делать потому что мне лень, ну скоро чет добавлю))</p>
-    <div class="card-images">
-      <img src="tvo1.jpg" alt="WOW">
-      <img src="tvo13.jpg" alt="WOW">
-    </div>
-  </div>
-
-  <!-- Центр — ech0noway -->
-  <div class="card">
-    <h3>Инфа про ech0noway</h3>
+    <h3>Инфа про Владоса</h3>
     <p>Вот вам некоторые факты про владоса  
       <a href="https://ech0noway.github.io/information/" target="_blank">ech0noway</a>
     </p>
@@ -221,11 +205,73 @@
       <img src="ech010.jpg" alt="WOW">
     </div>
   </div>
+</div>
 
-  <!-- Правая карточка — d3StRoyeed -->
+    <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .card-wrapper {
+    display: flex;
+    justify-content: flex-start; /* выравнивание влево */
+    padding: 40px;
+  }
+
+  .card {
+    background-color: #cccacc;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: #080808;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .card a {
+    color: #400752;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+
+  .card-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card-images img {
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<div class="card-wrapper">
   <div class="card">
-    <h3>Факты про d3StRoyeed</h3>
-    <p>Вот вам некоторые факты про дестроида  
+    <h3>Факты про Андрея</h3>
+    <p>
+      Вот вам некоторые факты про дестроида
       <a href="https://ech0noway.github.io/d3StRoyeed/" target="_blank">d3StRoyeed</a>
     </p>
     <div class="card-images">
@@ -233,4 +279,67 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/FemboyPup_in_bed.jpg/1200px-FemboyPup_in_bed.jpg" alt="WOW">
     </div>
   </div>
+</div>
+    <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
 
+  .card-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
+  }
+
+  .card {
+    background-color: #cccacc;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: #080808;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .card-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card-images img {
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<div class="card-wrapper">
+  <div class="card">
+    <h3>Про Настю</h3>
+    <p>А про Настю пока что ничего не найдено, ну или я не хочу делать потому что мне лень, ну скоро чет добавлю))</p>
+    <div class="card-images">
+      <img src="tvo1.jpg" alt="WOW">
+      <img src="tvo13.jpg" alt="WOW">
+    </div>
+  </div>
+</div>
+    <img scr="Austria-Wieden-Strauss.jpg" align = "right">
+ </body>
+ </html>
