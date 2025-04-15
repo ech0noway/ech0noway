@@ -6,26 +6,24 @@
       <title>twitch/tg ech0noway</title>
     </head>  
    <style>
-    body {
+     body {
       background-color: #121212;
       color: white;
       font-family: Arial, sans-serif;
       padding: 2rem;
       transition: background-color 0.4s, color 0.4s;
     }
-
     body.light {
       background-color: white;
       color: black;
     }
-
     .theme-toggle {
       position: fixed;
       bottom: 20px;
       right: 20px;
       padding: 12px 18px;
       font-size: 14px;
-      background-color: 4CAF50;
+      background-color: #4CAF50;
       color: white;
       border: none;
       border-radius: 8px;
@@ -33,37 +31,26 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
     }
-
     .theme-toggle:hover {
       background-color: #45a049;
     }
   </style>
 </head>
 <body>
-
   <!-- Кнопка для смены темы -->
   <button class="theme-toggle" onclick="toggleTheme()">🌙 Сменить тему</button>
-
   <script>
     function toggleTheme() {
       document.body.classList.toggle("light");
-
       // Меняем текст кнопки в зависимости от темы
       const btn = document.querySelector(".theme-toggle");
       if (document.body.classList.contains("light")) {
-        btn.innerText = "🌙 Тёмная тема";
+        btn.innerText = "🌞 Тёмная тема";
       } else {
-        btn.innerText = "🌞 Светлая тема";
+        btn.innerText = "🌙 Светлая тема";
       }
     }
   </script>
-  <script>
-  document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.key === "z") {
-      alert("Поздравляю ты долбаеб 😈😈");
-    }
-  });
-</script>
   <style>
   /* Скрываем стандартный курсор */
   body {
