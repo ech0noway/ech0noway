@@ -6,7 +6,7 @@
       <title>twitch/tg ech0noway</title>
     </head>  
    <style>
-     body {
+    body {
       background-color: #121212;
       color: white;
       font-family: Arial, sans-serif;
@@ -14,7 +14,9 @@
       transition: background-color 0.4s, color 0.4s;
     }
     body.light {
+ 
       background-color: white;
+ 
       color: black;
     }
     .theme-toggle {
@@ -38,53 +40,50 @@
 </head>
 <body>
   <!-- Кнопка для смены темы -->
-  <button class="theme-toggle" onclick="toggleTheme()">🌙 Сменить тему</button>
-  <script>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Сменить тему</button> 
+  <script> 
     function toggleTheme() {
       document.body.classList.toggle("light");
       // Меняем текст кнопки в зависимости от темы
       const btn = document.querySelector(".theme-toggle");
       if (document.body.classList.contains("light")) {
-        btn.innerText = "🌞 Тёмная тема";
       } else {
         btn.innerText = "🌙 Светлая тема";
+        btn.innerText = "🌞 Светлая тема";
       }
     }
   </script>
+  <script>
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "z") {
+      alert("Поздравляю ты долбаеб 😈😈");
+    }
+  });
+</script>
   <style>
-  /* Скрываем стандартный курсор */
   body {
     cursor: none;
   }
-
-  /* Наш кастомный курсор */
   .glow {
     position: fixed;
     pointer-events: none;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 30px #0ff;
+    transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: transform 0.05s ease;
   }
 </style>
-
-<!-- Курсор-замена -->
 <div class="glow" id="glow"></div>
-
 <script>
   const glow = document.getElementById("glow");
-
   document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.pageX + "px";
-    glow.style.top = e.pageY + "px";
-  });
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  }); 
 </script>
-
-
-
 <script>
   for (let i = 0; i < 100; i++) {
     let star = document.createElement("div");
@@ -93,14 +92,14 @@
     star.style.top = Math.random() * 100 + "vh";
     star.style.animationDuration = 5 + Math.random() * 5 + "s";
     document.body.appendChild(star);
-  }
+  } 
 </script>
   <h1 id="typing"></h1>
-<script>
+<div id="typing" style="text-align: center; font-size: 1.5rem; margin-top: 20vh;"></div>
+<script> 
   const text = "Всем привет тут будет вся информация про ech0noway и его модеров";
   let i = 0;
   const speed = 70;
-
   function typeWriter() {
     if (i < text.length) {
       document.getElementById("typing").innerHTML += text.charAt(i);
@@ -108,10 +107,8 @@
       setTimeout(typeWriter, speed);
     }
   }
-
   typeWriter();
 </script>
-
    <div style="position: absolute; right: 20px; top: 50px;">
     <button onclick="clickCounter()">кликай</button>
 <p>ech0noway взял в рот у модеров <span id="count">0</span> раз</p>
@@ -132,7 +129,6 @@
 </script>
      </div>
  <div> <button id="troll" style="position:absolute;">БРАТ СКАЯ?</button>
-
 <script>
   const btn = document.getElementById("troll");
   btn.addEventListener("mouseover", () => {
