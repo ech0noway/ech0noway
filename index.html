@@ -65,32 +65,37 @@
   });
 </script>
   <style>
+  /* Скрываем стандартный курсор */
   body {
     cursor: none;
   }
 
+  /* Наш кастомный курсор */
   .glow {
     position: fixed;
     pointer-events: none;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 30px #0ff;
-    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px white;
     z-index: 9999;
+    transition: transform 0.05s ease;
   }
 </style>
 
+<!-- Курсор-замена -->
 <div class="glow" id="glow"></div>
 
 <script>
   const glow = document.getElementById("glow");
+
   document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
+    glow.style.left = e.pageX + "px";
+    glow.style.top = e.pageY + "px";
   });
 </script>
+
 
 
 <script>
